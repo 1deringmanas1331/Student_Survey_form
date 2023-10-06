@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title> Students Survey</title>
+</head>
+<body>
+    <header>
+        <h1>College Students Survey</h1>
+        <img src="logoPesu.png" alt="College Logo" id="logo">
+    </header>
+
+    <form id="student-survey-form" onsubmit="return onSubmit()">
+        <fieldset>
+            <legend>Student Details</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]+" required>
+            </div>
+            <div>
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <label>Interests:</label>
+                <input type="checkbox" id="programming" name="interests[]" value="programming">
+                <label for="programming">Programming</label>
+                <input type="checkbox" id="sports" name="interests[]" value="sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests[]" value="music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="music" name="interests[]" value="drawing">
+                <label for="music">Drawing</label>
+                <input type="checkbox" id="music" name="interests[]" value="dance">
+                <label for="music">Dance</label>
+            </div>
+            <div>
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="cse">Computer Science</option>
+                    <option value="ece">Electronics and Communication</option>
+                    <option value="mech">Mechanical Engineering</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            <div>
+                <label for="feedback">Please provide feedback:</label>
+                <textarea id="feedback" name="feedback"></textarea>
+            </div>
+        </fieldset>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <script>
+        function onSubmit() {
+            alert("Successfully submitted");
+            return true;
+        }
+    </script>
+</body>
+</html>
